@@ -1,0 +1,161 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  position: fixed;
+}
+
+/* Facebook title */
+.heading {
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1877f2;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Registration box */
+.box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title section */
+.title {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.title h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.title span {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* Form body */
+.boxBottom {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input styling */
+input, select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+input:focus, select:focus {
+  outline: 2px solid #1877f2;
+  border-color: #1877f2;
+}
+
+/* Name section */
+.name-sec {
+  display: flex;
+  gap: 10px;
+}
+
+/* Birthday */
+.birthday p {
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.birthInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.birthInfo select {
+  flex: 1;
+  margin-right: 5px;
+}
+.birthInfo select:last-child {
+  margin-right: 0;
+}
+
+/* Gender */
+.gender p {
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.genderInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.genderBox {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+  cursor: pointer;
+}
+.genderBox:hover {
+  border-color: #1877f2;
+}
+
+/* Info text */
+.para1 {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+}
+.para1 a {
+  color: #1877f2;
+  text-decoration: none;
+}
+.para1 a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  background-color: #42b72a;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #36a420;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .box {
+    width: 90%;
+  }
+  .genderBox {
+    padding: 8px;
+  }
+}
