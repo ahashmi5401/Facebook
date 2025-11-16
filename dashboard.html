@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="emojiModal.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Facebook-like Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="right">
+          <h2>F</h2>
+          <input type="text" placeholder="Search Facebook" />
+        </div>
+        <div class="center">
+          <i class="fa-regular fa-house"></i>
+          <i class="fa-solid fa-users"></i>
+          <i class="fa-regular fa-circle-play"></i>
+          <i class="fa-solid fa-store"></i>
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <div class="left">
+          <i class="fa-solid fa-grip"></i>
+          <i class="fa-regular fa-message"></i>
+          <i class="fa-solid fa-bell"></i>
+          <i class="fa-regular fa-circle-user"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <aside id="rightBarContent" class="right-bar"></aside>
+
+      <div class="mainContent">
+        <div class="postModal">
+          <div class="post">
+            <i class="fa-solid fa-circle-user"></i>
+            <div id="inputPost">
+              <button id="openPostModal">What's on your mind, ayan</button>
+            </div>
+            <div class="postIcon">
+              <i class="fa-solid fa-video" id="videoUpload"></i>
+              <i class="fa-solid fa-image" id="picUpload"></i>
+              <i class="fa-regular fa-face-smile" id="emojiUpload"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <div class="storyCard"></div>
+      </div>
+
+      <div class="left-bar"></div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modalBox">
+      <div class="modal">
+        <header>
+          <h2>Create Post</h2>
+          <div class="cancel"><i class="fa-solid fa-x"></i></div>
+        </header>
+
+        <div class="name">
+          <i class="fa-solid fa-circle-user"></i>
+          <div class="nameFriends">
+            <p>Muhammad Ayan Hashmi</p>
+            <select name="Friend">
+              <option auto>Friend</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="writePost">
+          <textarea
+            id="postDescription"
+            placeholder="What's On Your Mind, ayan?"
+          ></textarea>
+        </div>
+
+        <div class="emojiSection">
+          <img
+            height="38"
+            src="https://www.facebook.com/images/composer/SATP_Aa_square-2x.png"
+            alt=""
+          />
+          <i class="fa-regular fa-face-smile"></i>
+        </div>
+
+        <div class="itemPost">
+          <p>Add to your post</p>
+          <div class="itemPostLeft">
+            <img
+              src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png"
+              alt=""
+            />
+            <img
+              src="https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/b37mHA1PjfK.png"
+              alt=""
+            />
+            <img id="openEmojiModalBtn"
+              src="https://static.xx.fbcdn.net/rsrc.php/v4/yd/r/Y4mYLVOhTwq.png"
+              alt=""
+            />
+            <img
+              src="https://static.xx.fbcdn.net/rsrc.php/v4/y1/r/8zlaieBcZ72.png"
+              alt=""
+            />
+            <img
+              src="https://static.xx.fbcdn.net/rsrc.php/v4/yT/r/q7MiRkL7MLC.png"
+              alt=""
+            />
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+
+        <div class="postBtn">
+          <button id="postBtn">Post</button>
+        </div>
+      </div>
+    </div>
+    <!-- emoji modal -->
+    !-- Emoji Modal -->
+<div id="emojiModalBackdrop" class="modal-backdrop">
+  <div class="modal" id="modalBox">
+    <span id="closeModalBtn" class="close-btn">✖</span>
+    <h2>Select an Emoji</h2>
+
+    <div class="emoji-category">
+      <button data-type="all" class="active">😀 All</button>
+      <button data-type="face">😃 Face</button>
+      <button data-type="flag">🇵🇰 Flag</button>
+      <button data-type="symbol">⭐ Symbol</button>
+    </div>
+
+    <input type="text" id="emojiSearch" placeholder="Type to search emoji..." />
+    <div class="emoji-grid" id="emojiGrid"></div>
+  </div>
+</div>
+    <script src="dashboard.js"></script>
+    <script src="modal.js"></script>
+  </body>
+</html>
